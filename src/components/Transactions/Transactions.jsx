@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 
 export const Transactions = ({ transactions }) => {
-  const { amount, currency, id, type } = transactions;
   return (
     <Table className="transaction-history">
       <Head>

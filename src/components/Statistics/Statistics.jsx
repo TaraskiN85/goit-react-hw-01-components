@@ -10,24 +10,12 @@ const Statistics = ({stats, title = ""}) => {
 
   return (
     <section className={css.statistics}>
-      <h2 className={css.title}>{title}</h2>
+      {title && <h2 className={css.title}>{title}</h2>}
       <ul className={css.statsList}>
-        <li className={css.item} style={{backgroundColor: getRandomHexColor()}}>
-          <span className={css.label}>.docx</span>
-          <span className={css.percentage}>{docx}</span>
-        </li>
-        <li className={css.item} style={{backgroundColor: getRandomHexColor()}}>
-          <span className={css.label}>.mp3</span>
-          <span className={css.percentage}>{mp3}</span>
-        </li>
-        <li className={css.item} style={{backgroundColor: getRandomHexColor()}}>
-          <span className={css.label}>.pdf</span>
-          <span className={css.percentage}>{mp4}</span>
-        </li>
-        <li className={css.item} style={{backgroundColor: getRandomHexColor()}}>
-          <span className={css.label}>.mp4</span>
-          <span className={css.percentage}>{pdf}</span>
-        </li>
+        {stats.map(item => <li className={css.item} key={item.id} style={{backgroundColor: getRandomHexColor()}}>
+          <span className={css.label}>{item.label}</span>
+          <span className={css.percentage}>{item.percentage}</span>
+        </li>)}
       </ul>
     </section>
   )

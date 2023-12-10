@@ -1,15 +1,16 @@
 .statistics {
   margin: auto;
+  background-color: #fff;
   width: 400px;
   height: 180px;
   display: flex;
   flex-direction: column;
   align-content: center;
+  justify-content: flex-end;
 }
 
 .title {
   height: calc(100% / 2);
-  background-color: #fff;
   text-align: center;
   font-size: 1.8rem;
   color: #32353a;

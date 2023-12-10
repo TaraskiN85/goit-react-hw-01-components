@@ -1,8 +1,7 @@
 import React from 'react'
 import css from "./Profile.module.css"
 
-const Profile = ({userData}) => {
-  const { username, location, avatar, stats, tag } = userData;
+const Profile = ({ username, location, avatar, stats, tag }) => {
   const { followers, likes, views } = stats;
   return (
     <div className={css.profile}>
